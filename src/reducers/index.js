@@ -1,5 +1,3 @@
-// import { VOTE_ANGULAR, VOTE_REACT, VOTE_VUE } from '../actions';
-
 const initialState = {
     angular: 0, 
     react: 0,

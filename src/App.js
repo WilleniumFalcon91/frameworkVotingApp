@@ -26,15 +26,15 @@ class App extends Component {
           <br />
             <div>
                 <img 
-                  className="angular-logo" src="../angular.png"
+                  className="angular-logo" src="../angular.png" alt="angular"
                   onClick={this.handleVoteAngular}
                 />
                 <img 
-                  className="react-logo" src="../React-icon.svg"
+                  className="react-logo" src="../React-icon.svg" alt="react"
                   onClick={this.handleVoteReact}
                 />
                 <img 
-                  className="vue-logo" src="../Vue.png"
+                  className="vue-logo" src="../Vue.png" alt="vue"
                   onClick={this.handleVoteVue}
                 />
             </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ProgressBar } from 'react-bootstrap';
 
 class Results extends Component {
     constructor(props) {
@@ -28,30 +29,66 @@ class Results extends Component {
         }
     }
 
+    votesAngularInPercentStyle() {
+        return {
+            width: this.votesAngularInPercent()+'%'
+        }
+    }
+    votesReactInPercentStyle() {
+        return {
+            width: this.votesReactInPercent()+'%'
+        }
+    }
+    votesVueInPercentStyle() {
+        return {
+            width: this.votesVueInPercent()+'%'
+        }
+    }
+
+
+
     render() {
         return (
             <div>
-                <div>
+                {/* <div>
                     <span className="label label-danger">
                         Angular: {this.votesAngularInPercent().toFixed(2) + '%'}
                     </span>
                     <div className="progress progress-striped active"></div>
-                    <div className="progress-bar progress-bar-danger"></div>
+                    <div className="progress-bar progress-bar-danger" style={this.votesAngularInPercentStyle()}></div>
                 </div>
                 <div>
-                    <span className="label label-danger">
+                    <span className="label label-info">
                         React: {this.votesReactInPercent().toFixed(2) + '%'}
                     </span>
                     <div className="progress progress-striped active"></div>
-                    <div className="progress-bar progress-bar-danger"></div>
+                    <div className="progress-bar progress-bar-info" style={this.votesReactInPercentStyle()}></div>
                 </div>
                 <div>
-                    <span className="label label-danger">
+                    <span className="label label-success">
                         Vue: {this.votesVueInPercent().toFixed(2) + '%'}
                     </span>
                     <div className="progress progress-striped active"></div>
-                    <div className="progress-bar progress-bar-danger"></div>
-                </div>
+                    <div className="progress-bar progress-bar-sucess" style={this.votesVueInPercentStyle()}></div>
+                </div> */}
+                    <span className="label label-danger">
+                        Angular: {this.votesAngularInPercent().toFixed(2) + '%'}
+                    </span>
+                    
+                    <ProgressBar striped bsStyle="danger" active now={this.votesAngularInPercent()}
+                />
+                    <span className="label label-info">
+                        React: {this.votesReactInPercent().toFixed(2) + '%'}
+                    </span>
+                    
+                    <ProgressBar striped bsStyle="info" active now={this.votesReactInPercent()}
+                />
+                    <span className="label label-success">
+                        Vue: {this.votesVueInPercent().toFixed(2) + '%'}
+                    </span>
+                    
+                    <ProgressBar striped bsStyle="success" active now={this.votesVueInPercent()}
+                />
             </div>
         )
     }
