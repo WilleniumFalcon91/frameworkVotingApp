@@ -21,9 +21,23 @@ class App extends Component {
     return (
       <div>
         <div className="jumbotron" style={{'textAlign': 'center'}}>
-          <img className="angular-logo" src="../angular.png"/>
-          <img className="react-logo" src="../React-icon.svg"/>
-          <img className="vue-logo" src="../Vue.png"/>
+          <h2>What is your favorite front-end framework in 2017?</h2>
+          <h4>Click on the logos below to vote!</h4>
+          <br />
+            <div>
+                <img 
+                  className="angular-logo" src="../angular.png"
+                  onClick={this.handleVoteAngular}
+                />
+                <img 
+                  className="react-logo" src="../React-icon.svg"
+                  onClick={this.handleVoteReact}
+                />
+                <img 
+                  className="vue-logo" src="../Vue.png"
+                  onClick={this.handleVoteVue}
+                />
+            </div>
         </div>
       </div>
     );

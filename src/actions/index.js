@@ -13,3 +13,4 @@ export const VOTE_VUE = () => {
         type: 'VOTE_VUE',
     }
 }
+
